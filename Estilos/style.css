@@ -17,7 +17,9 @@
 body, html {
    background-color: #5f2c82;
    height: 100vh;
-   width: 100vh;
+   width: 100%;
+    display: flex;
+    justify-content: center;
 
 }
 main {
@@ -37,13 +39,40 @@ section {
 }
 section#login >div#imagem {
     background: #5f2c82 url(../imagens/imagem01.jpg);
-    height: 200px;
     background-size: cover;
     background-position: center;
+    height: 200px;
 }
 
 section#login > div#formulario {
     padding: 20px;
     display: flex;
     flex-direction: column;
+}
+@media screen  (min-width: 768px) and (max-width:1920px) { 
+    section#login {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+    
+    section#login >div#imagem {
+        
+        float: left;
+        background: #5f2c82 url(../imagens/imagem01.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 500px;
+        margin-bottom: 20px;
+        width: 90%;
+        border-radius: 20px;
+    }
+    
+    section#login > div#formulario {
+        float: right;
+        width: 70%;
+    }
+    
+    
 }
